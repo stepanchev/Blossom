@@ -10,7 +10,7 @@ a {
 }
 
 header {
-  background-image: url(../img/main_hear.png);
+  background-image: url(../img/main_hear.png ) loading="lazy";
   background-size: cover;
   background-position: center;
   background-attachment: local;
@@ -23,6 +23,7 @@ header {
   justify-content: space-between;
   align-items: flex-start;
   padding-top: 2rem;
+  
 }
 
 .logo {
@@ -133,9 +134,9 @@ header {
   filter: blur(2px);
 }
 
-/* ПРАВИЛА ДЛЯ ПЕРЕКЛЮЧЕНИЯ КОНТЕЙНЕРОВ - ДОЛЖНЫ БЫТЬ ОДНИМ БЛОКОМ */
+
 .card-section-wrapper {
-  display: none; /* Скрываем все контейнеры */
+  display: none;
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
@@ -144,7 +145,7 @@ header {
 }
 
 .card-section-wrapper.activ {
-  display: flex; /* Показываем активный */
+  display: flex; 
 }
 
 @keyframes float {
@@ -277,6 +278,7 @@ section {
   height: 250px;
   object-fit: cover;
   display: block;
+  loading="lazy"
 }
 
 .card-content {
@@ -474,3 +476,4 @@ section {
     font-size: 0.9em;
   }
 }
+
