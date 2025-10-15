@@ -133,6 +133,20 @@ header {
   filter: blur(2px);
 }
 
+/* ПРАВИЛА ДЛЯ ПЕРЕКЛЮЧЕНИЯ КОНТЕЙНЕРОВ - ДОЛЖНЫ БЫТЬ ОДНИМ БЛОКОМ */
+.card-section-wrapper {
+  display: none; /* Скрываем все контейнеры */
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.card-section-wrapper.activ {
+  display: flex; /* Показываем активный */
+}
+
 @keyframes float {
   0% {
     transform: translate(0, 0);
@@ -156,6 +170,7 @@ section {
 }
 .opcee_conteiner {
   margin-top: 3%;
+  margin-left: 6%;
   display: flex;
   flex-wrap: wrap;
   gap: 5%;
@@ -230,15 +245,6 @@ section {
   border: 1px solid #ccc;
   border-radius: 20px;
   font-size: clamp(0.8rem, 2.5vw, 1rem);
-}
-
-.card-section-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
-  background-color: #ffffff;
-  width: 100%;
 }
 
 .card-section {
@@ -330,7 +336,20 @@ section {
   font-family: "Roboto", sans-serif;
   color: white;
 }
-
+.nomera {
+  text-align: center;
+}
+.nomera a {
+  margin: 20px;
+}
+.nomera_pogination {
+  color: #a1a1a1;
+}
+.active {
+  float: 1em;
+  color: #000000;
+  font-weight: bold;
+}
 @media (max-width: 1024px) {
   header {
     height: 600px;
@@ -400,6 +419,8 @@ section {
   }
   .nav-menu {
     gap: 10px;
+    position: absolute;
+    top: 12%;
   }
   .nav-item {
     font-size: clamp(10px, 4vw, 14px);
@@ -408,6 +429,9 @@ section {
   .opcee_conteiner {
     flex-direction: column;
     align-items: center;
+  }
+  .hero-content {
+    margin-bottom: 30%;
   }
   .byket,
   .korzina,
@@ -450,7 +474,3 @@ section {
     font-size: 0.9em;
   }
 }
-
-
-
-
