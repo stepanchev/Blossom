@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог - Blossom</title>
+
+    <link rel="stylesheet" href="../styles/katalog.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Blossom</div>
+      <nav class="nav-menu">
+        <a href="../index.html" class="nav-item">Главная</a>
+        <a href="catalog.html" class="nav-item">Каталог</a>
+        <a href="delivery.html" class="nav-item">Доставка</a>
+      </nav>
+      <button id="openCartBtn" class="cart-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="34"
+          height="34"
+          fill="white"
+        >
+          <path
+            d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12z"
+          />
+          <path d="M9 10h2v8H9zm4 0h2v8h-2z" />
+        </svg>
+        <span class="cart-count-badge">0</span>
+      </button>
+      <div class="hero-content">
+        <h1>Каталог цветов</h1>
+        <p>Выберите идеальный букет</p>
+        <a href="#catalog-grid" class="btn">Перейти к товарам</a>
+      </div>
+      <div class="floating-bubbles" id="bubbles-container"></div>
+    </header>
+
+    <div class="catalog-container">
+      <div class="catalog-header">
+        <h1>Наш каталог</h1>
+        <p>Свежие цветы и изысканные композиции</p>
+      </div>
+
+      <div class="controls">
+        <div class="filters">
+          <div class="filter-group">
+            <label for="category-filter">Категория:</label>
+            <select id="category-filter">
+              <option value="all">Все</option>
+              <option value="rose">Розы</option>
+              <option value="tulip">Тюльпаны</option>
+              <option value="peony">Пионы</option>
+              <option value="chrysanthemum">Хризантемы</option>
+              <option value="gerbera">Герберы</option>
+              <option value="orchid">Орхидеи</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="price-min">Цена от (₽):</label>
+            <input type="number" id="price-min" placeholder="0" min="0" />
+          </div>
+          <div class="filter-group">
+            <label for="price-max">Цена до (₽):</label>
+            <input type="number" id="price-max" placeholder="5000" min="0" />
+          </div>
+        </div>
+
+        <div class="sort-controls">
+          <button class="sort-btn" data-sort="name-asc">Название (А-Я)</button>
+          <button class="sort-btn" data-sort="name-desc">Название (Я-А)</button>
+          <button class="sort-btn" data-sort="price-asc">Цена (↑)</button>
+          <button class="sort-btn" data-sort="price-desc">Цена (↓)</button>
+        </div>
+      </div>
+
+      <div class="catalog-grid" id="catalog-grid">
+        <!-- Карточки товаров будут вставлены сюда скриптом -->
+      </div>
+
+      <div class="pagination" id="pagination">
+        <!-- Кнопки пагинации будут вставлены сюда скриптом -->
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer_container">
+        <div class="footer_section">
+          <h4>Каталог</h4>
+          <ul class="footer_links">
+            <li><a href="#">Розы</a></li>
+            <li><a href="#">Тюльпаны</a></li>
+            <li><a href="#">Пионы</a></li>
+            <li><a href="#">Хризантемы</a></li>
+            <li><a href="#">Герберы</a></li>
+          </ul>
+        </div>
+        <div class="footer_section">
+          <h4>Информация</h4>
+          <ul class="footer_links">
+            <li><a href="#">О магазине</a></li>
+            <li><a href="#">Условия доставки</a></li>
+            <li><a href="#">Способы оплаты</a></li>
+          </ul>
+        </div>
+        <div class="footer_section">
+          <h4>Контакты</h4>
+          <div class="footer_contact_info">
+            <div class="contact_item">
+              <span class="contact_text">г. Ульяновск</span>
+            </div>
+            <div class="contact_item">
+              <span class="contact_text">+7 (495) 123-45-67</span>
+            </div>
+            <div class="contact_item">
+              <span class="contact_icon">🕒</span>
+              <span class="contact_text">
+                Пн-Пт: 9:00-18:00<br />
+                Сб-Вс: 10:00-16:00
+              </span>
+            </div>
+            <div class="social_links">
+              <a href="#" title="ВКонтакте">ВК</a>
+              <a href="#" title="Instagram">IG</a>
+              <a href="#" title="Telegram">TG</a>
+              <a href="#" title="Facebook">FB</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Модальное окно корзины -->
+    <div id="cartModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <h2>Ваша корзина</h2>
+          <div id="cartItems"></div>
+          <div id="cartTotal">Итого: 0 ₽</div>
+          <button id="checkoutButton" class="card-button">
+            Оформить заказ
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно подробностей -->
+    <div id="flowerModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <img id="modalImage" src="" alt="Изображение букета" />
+          <div class="modal-text">
+            <h2 id="modalTitle">Название букета</h2>
+            <p id="modalDescription">Описание букета</p>
+            <div id="modalPrice" class="card-price">Цена</div>
+            <button id="modalAddToCart" class="card-button">
+              Добавить в корзину
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../scripsts/katalog.js"></script>
+  </body>
+</html>
