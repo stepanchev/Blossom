@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,19 +10,34 @@
     <header class="header">
       <div class="logo">Blossom</div>
       <nav class="nav-menu">
-        <a href="#" class="nav-item">Каталог</a>
         <a href="pages/subscriptions.html" class="nav-item">Главное</a>
-        <a href="#" class="nav-item">Доставка</a>
+        <a href="pages/katalog.html" class="nav-item">Каталог</a>
+        <a href="pages/delivery.html" class="nav-item">Доставка</a>
       </nav>
+      <button id="openCartBtn" class="cart-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="34"
+          height="34"
+          fill="white"
+        >
+          <path
+            d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12z"
+          />
+          <path d="M9 10h2v8H9zm4 0h2v8h-2z" />
+        </svg>
+        <span class="cart-count-badge">0</span>
+      </button>
       <div class="hero-content">
         <h1>Доставка букетов цветов и композиций в Ульяновске</h1>
         <p>свадебные букеты и цветочное оформление мероприятий</p>
-        <a href="#main_section_katalog" class="btn">Выбрать букет</a>
+        <a href="#main_section_katalog" class="btn" id="  ">Выбрать букет</a>
       </div>
       <div class="floating-bubbles" id="bubbles-container"></div>
     </header>
     <main>
-      <section>
+      <section id="katalog">
         <div class="opcee_conteiner">
           <div class="byket">
             <img src="img/byket.png" alt="" />
@@ -37,15 +52,7 @@
             <p>Бесплатная доставка при заказе от 3000 руб.</p>
           </div>
         </div>
-        <nav class="nav-menu-section">
-          <a href="#" class="">Каталог</a>
-          <a class="">Главное</a>
-          <a href="#" class="">Доставка</a>
-          <a href="#" class="">Доставка</a>
-          <a href="#" class="">Доставка</a>
-        </nav>
       </section>
-
       <div class="card-section-wrapper activ" id="coneiner1">
         <section class="card-section">
           <div class="flower-card">
@@ -58,7 +65,22 @@
                 Элегантная и ароматная роза ярко-красного цвета.
               </p>
               <div class="card-price">1 200 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="1"
+                data-name="Роза 'Красная страсть'"
+                data-price="1200"
+                data-img="img/COMPOSITIONS_1.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Элегантная и ароматная роза ярко-красного цвета, символ любви и
+                страсти. Идеально подходит для романтического вечера или как
+                яркое признание в чувствах. Эти розы обладают насыщенным цветом
+                и бархатистыми лепестками, которые дарят ощущение роскоши и
+                нежности.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -71,7 +93,22 @@
                 Свежий букет желтых и красных тюльпанов.
               </p>
               <div class="card-price">2 500 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="2"
+                data-name="Букет тюльпанов"
+                data-price="2500"
+                data-img="img/COMPOSITIONS_2.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Свежий и жизнерадостный букет, состоящий из желтых и красных
+                тюльпанов, принесет в дом весеннее настроение и ощущение
+                обновления. Тюльпаны – это символ нового начала и искреннего
+                восхищения. Их яркие краски и элегантные формы создают атмосферу
+                радости и тепла.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -84,7 +121,23 @@
                 Нежные, крупные цветы с насыщенным ароматом.
               </p>
               <div class="card-price">3 000 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="3"
+                data-name="Пионы 'Садовые'"
+                data-price="3000"
+                data-img="img/COMPOSITIONS_3.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Нежные, крупные цветы с насыщенным ароматом, напоминающим
+                садовый шарм и утонченность. Пионы – это короли весны, и их
+                пышные лепестки создают ощущение праздника. Эти цветы идеально
+                подходят для создания утонченных композиций и вручения как
+                особый знак внимания, символизирующий счастье, богатство и
+                доброжелательность.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -97,7 +150,22 @@
                 Стильный и долговечный букет белых хризантем.
               </p>
               <div class="card-price">1 800 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="4"
+                data-name="Букет хризантем"
+                data-price="1800"
+                data-img="img/COMPOSITIONS_4.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Стильный и долговечный букет из белых хризантем, отличающихся
+                своей элегантностью и изысканностью. Хризантемы – это символ
+                долголетия, честности и искренности. Их простая, но в то же
+                время выразительная форма делает их отличным выбором для
+                подарка, который будет радовать глаз на протяжении многих дней.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -110,7 +178,22 @@
                 Яркий букет из разноцветных гербер.
               </p>
               <div class="card-price">2 100 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="5"
+                data-name="Герберы 'Смешанные'"
+                data-price="2100"
+                data-img="img/COMPOSITIONS_5.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Яркий и жизнерадостный букет из разноцветных гербер, который не
+                оставит никого равнодушным. Герберы – это символ детской
+                непосредственности, радости и оптимизма. Их насыщенные оттенки и
+                симпатичные формы создают атмосферу праздника и дарят позитивные
+                эмоции, поднимая настроение на весь день.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -123,12 +206,28 @@
                 Элегантное растение в горшке, идеально для дома.
               </p>
               <div class="card-price">2 700 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="6"
+                data-name="Орхидея фаленопсис"
+                data-price="2700"
+                data-img="img/COMPOSITIONS_6.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Элегантное растение в горшке, идеально подходящее для украшения
+                дома или офиса. Орхидея фаленопсис – это символ экзотики,
+                роскоши и утонченности. Ее изысканные цветы и глянцевые листья
+                придают помещению особый шарм и создают атмосферу уюта и
+                спокойствия. Это идеальный подарок для ценителей необычной
+                красоты.
+              </p>
             </div>
           </div>
           <div class="flower-card">
             <div class="card-image">
-              <img src="img/COMPOSITIONS_1.png" alt="Роза 'Красная страсть'" />
+              <img src="img/COMPOSITIONS_1.png" alt="Роза 'Королевская'" />
             </div>
             <div class="card-content">
               <h3 class="card-title">Роза 'Королевская'</h3>
@@ -136,7 +235,22 @@
                 Роскошная роза с насыщенным ароматом и бархатистыми лепестками.
               </p>
               <div class="card-price">1 400 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="7"
+                data-name="Роза 'Королевская'"
+                data-price="1400"
+                data-img="img/COMPOSITIONS_1.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Роскошная роза с насыщенным ароматом и бархатистыми лепестками,
+                излучающая королевское великолепие и нежность. Эти розы обладают
+                насыщенным рубиновым оттенком, который подчеркивает их
+                элегантность. Подарок из таких роз – это признание в любви и
+                уважении, способное тронуть самое сердце.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -149,7 +263,22 @@
                 Нежные тюльпаны различных оттенков, символ весны и обновления.
               </p>
               <div class="card-price">2 200 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="8"
+                data-name="Весенние тюльпаны"
+                data-price="2200"
+                data-img="img/COMPOSITIONS_2.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Нежные тюльпаны различных оттенков, символ весны и обновления.
+                Этот букет наполнен свежестью и светлыми чувствами, он как будто
+                дарит частичку весеннего солнца. Разнообразие оттенков – от
+                нежно-желтого до насыщенного алого – создает ощущение праздника
+                и радости, напоминая о пробуждении природы.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -162,7 +291,22 @@
                 Дикие пионы с необычными оттенками и нежным ароматом.
               </p>
               <div class="card-price">3 200 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="9"
+                data-name="Пионы 'Лесные сказки'"
+                data-price="3200"
+                data-img="img/COMPOSITIONS_3.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Дикие пионы с необычными оттенками и нежным ароматом,
+                напоминающие о сказочных лесных полянах. Их естественная красота
+                и слегка неуловимый, но чарующий аромат создают атмосферу
+                волшебства и уединения. Эти пионы идеально подойдут для создания
+                романтичной и уютной атмосферы, словно из детства.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -175,7 +319,23 @@
                 Яркие осенние хризантемы с насыщенными цветами.
               </p>
               <div class="card-price">2 000 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="10"
+                data-name="Хризантемы 'Осень'"
+                data-price="2000"
+                data-img="img/COMPOSITIONS_4.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Яркие осенние хризантемы с насыщенными цветами, напоминающие о
+                красках увядающей листвы и теплых осенних днях. Эти цветы
+                обладают богатой палитрой – от золотисто-желтого до насыщенного
+                бордо. Они приносят в дом уют и тепло, создавая атмосферу
+                спокойствия и умиротворения, идеально подходя для осеннего
+                интерьера.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -188,7 +348,22 @@
                 Яркие герберы всех цветов радуги в одном букете.
               </p>
               <div class="card-price">2 300 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="11"
+                data-name="Герберы 'Радуга'"
+                data-price="2300"
+                data-img="img/COMPOSITIONS_5.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Яркие герберы всех цветов радуги в одном букете – это взрыв
+                красок и эмоций. Каждый цвет несет свою нотку счастья и
+                позитива, создавая яркую и запоминающуюся композицию. Этот букет
+                – как маленькая радуга, дарящая светлое настроение, надежду и
+                радость. Отличный выбор для любого праздника.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -201,17 +376,31 @@
                 Ароматная орхидея с нежными белыми цветами.
               </p>
               <div class="card-price">2 900 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="12"
+                data-name="Орхидея 'Ваниль'"
+                data-price="2900"
+                data-img="img/COMPOSITIONS_6.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Ароматная орхидея с нежными белыми цветами, напоминающими о
+                чистоте, изысканности и утонченности. Ее светлый, почти
+                прозрачный оттенок и изысканная форма создают ощущение
+                невесомости и чистоты. Аромат цветка наполняет пространство
+                свежестью и нежностью, даря ощущение уюта и спокойствия.
+              </p>
             </div>
           </div>
         </section>
       </div>
-
       <div class="card-section-wrapper" id="coneiner2">
         <section class="card-section">
           <div class="flower-card">
             <div class="card-image">
-              <img src="img/COMPOSITIONS_1.png" alt="Роза 'Красная страсть'" />
+              <img src="img/COMPOSITIONS_1.png" alt="Роза 'Белая мечта'" />
             </div>
             <div class="card-content">
               <h3 class="card-title">Роза 'Белая мечта'</h3>
@@ -219,7 +408,22 @@
                 Изящная белая роза, символ чистоты и невинности.
               </p>
               <div class="card-price">1 300 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="13"
+                data-name="Роза 'Белая мечта'"
+                data-price="1300"
+                data-img="img/COMPOSITIONS_1.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Изящная белая роза, символ чистоты, невинности и нового начала.
+                Ее безупречный вид и нежный аромат создают ощущение
+                умиротворения и светлости. Белые розы часто используются для
+                выражения уважения, глубокой симпатии и духовной чистоты, делая
+                их идеальным выбором для важных и трогательных моментов.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -232,7 +436,22 @@
                 Длинноножные тюльпаны с насыщенными цветами.
               </p>
               <div class="card-price">2 600 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="14"
+                data-name="Тюльпаны 'Королевские'"
+                data-price="2600"
+                data-img="img/COMPOSITIONS_2.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Длинноножные тюльпаны с насыщенными цветами, которые придают
+                букету особую элегантность и роскошь. Их яркие оттенки и
+                идеальная форма делают их по-настоящему королевскими. Такой
+                букет – это не просто цветы, это выражение глубокого уважения и
+                признания, достойное самого важного человека.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -245,7 +464,22 @@
                 Крупные пионы с насыщенным ароматом и бархатными лепестками.
               </p>
               <div class="card-price">3 100 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="15"
+                data-name="Пионы 'Ароматная страсть'"
+                data-price="3100"
+                data-img="img/COMPOSITIONS_3.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Крупные пионы с насыщенным ароматом и бархатными лепестками,
+                которые наполняют воздух нежным и чувственным благоуханием. Эти
+                цветы обладают удивительной способностью вызывать самые тёплые и
+                романтичные чувства. Их пышность и богатство делают их идеальным
+                выбором для выражения искренней любви и страсти.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -258,7 +492,22 @@
                 Уникальные хризантемы, раскрывающиеся на протяжении дня.
               </p>
               <div class="card-price">1 900 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="16"
+                data-name="Хризантемы 'Круглосуточные'"
+                data-price="1900"
+                data-img="img/COMPOSITIONS_4.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Уникальные хризантемы, раскрывающиеся на протяжении дня,
+                создавая ощущение постоянного обновления и свежести. Их
+                необычный вид и поведение привлекают внимание и вызывают
+                восхищение. Эти цветы – символ упорства и стойкости, способные
+                радовать вас снова и снова.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -271,7 +520,22 @@
                 Герберы с оттенками оранжевого и желтого цветов.
               </p>
               <div class="card-price">2 400 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="17"
+                data-name="Герберы 'Солнечный закат'"
+                data-price="2400"
+                data-img="img/COMPOSITIONS_5.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Герберы с оттенками оранжевого и желтого цветов, напоминающие о
+                тёплом и ярком солнечном закате. Эти цветы излучают тепло и
+                радость, создавая уютную и вдохновляющую атмосферу. Их яркие
+                оттенки дарят ощущение счастья и беззаботности, словно лучик
+                света в самый пасмурный день.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -284,12 +548,30 @@
                 Экзотическая орхидея с нежным ароматом, цветущая ночью.
               </p>
               <div class="card-price">2 800 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="18"
+                data-name="Орхидея 'Ночная фея'"
+                data-price="2800"
+                data-img="img/COMPOSITIONS_6.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Экзотическая орхидея с нежным ароматом, цветущая ночью, словно
+                фея, появляющаяся из сказки. Ее необычный внешний вид и
+                таинственный аромат создают атмосферу волшебства и загадочности.
+                Это растение – идеальный выбор для ценителей неординарной
+                красоты и тонкой эстетики.
+              </p>
             </div>
           </div>
           <div class="flower-card">
             <div class="card-image">
-              <img src="img/COMPOSITIONS_1.png" alt="Роза 'Красная страсть'" />
+              <img
+                src="img/COMPOSITIONS_1.png"
+                alt="Роза 'Королевский синий'"
+              />
             </div>
             <div class="card-content">
               <h3 class="card-title">Роза 'Королевский синий'</h3>
@@ -297,7 +579,22 @@
                 Редкая синяя роза с необычным насыщенным оттенком.
               </p>
               <div class="card-price">1 600 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="19"
+                data-name="Роза 'Королевский синий'"
+                data-price="1600"
+                data-img="img/COMPOSITIONS_1.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Редкая синяя роза с необычным насыщенным оттенком,
+                символизирующая мечту, исполнение желаний и нечто невероятное.
+                Ее необычный цвет вызывает восхищение и интерес, делая букет
+                по-настоящему уникальным. Подарок из таких роз – это знак
+                особого внимания и признания исключительности.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -310,7 +607,22 @@
                 Нежные пастельные тюльпаны с мягкими оттенками.
               </p>
               <div class="card-price">2 100 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="20"
+                data-name="Тюльпаны 'Пастель'"
+                data-price="2100"
+                data-img="img/COMPOSITIONS_2.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Нежные пастельные тюльпаны с мягкими оттенками, создающие
+                ощущение уюта, спокойствия и нежности. Их нежные цвета – как
+                легкое прикосновение, дарящее тепло и заботу. Такой букет –
+                идеальный выбор для выражения искренних, тёплых чувств и
+                создания умиротворяющей атмосферы.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -323,7 +635,21 @@
                 Легкие и воздушные пионы с нежными оттенками.
               </p>
               <div class="card-price">3 300 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="21"
+                data-name="Пионы 'Весенние ветры'"
+                data-price="3300"
+                data-img="img/COMPOSITIONS_3.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Легкие и воздушные пионы с нежными оттенками, словно овеянные
+                первым весенним ветром. Их естественная красота и нежность
+                создают ощущение обновления и свободы. Эти цветы напоминают о
+                пробуждении природы и дарят ощущение лёгкости и вдохновения.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -336,7 +662,21 @@
                 Белые хризантемы с пушистыми лепестками.
               </p>
               <div class="card-price">1 700 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="22"
+                data-name="Хризантемы 'Снежинки'"
+                data-price="1700"
+                data-img="img/COMPOSITIONS_4.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Белые хризантемы с пушистыми лепестками, напоминающие о зимней
+                сказке и чистоте снега. Их пушистая текстура и безупречный белый
+                цвет создают ощущение свежести и праздника. Такой букет – как
+                вестник зимы, дарящий ощущение чистоты и волшебства.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -349,7 +689,22 @@
                 Герберы с природными оттенками зелени и коричневого.
               </p>
               <div class="card-price">2 500 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="23"
+                data-name="Герберы 'Лесные краски'"
+                data-price="2500"
+                data-img="img/COMPOSITIONS_5.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Герберы с природными оттенками зелени и коричневого,
+                напоминающие о лесных лугах и земной стихии. Эти земные,
+                природные цвета создают ощущение уюта, стабильности и близости к
+                природе. Букет идеально подойдёт для интерьера в натуральных
+                тонах и для ценителей природной эстетики.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -362,17 +717,31 @@
                 Орхидея с ярко-желтыми цветами, сияющая на солнце.
               </p>
               <div class="card-price">3 000 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="24"
+                data-name="Орхидея 'Золотой дождь'"
+                data-price="3000"
+                data-img="img/COMPOSITIONS_6.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Орхидея с ярко-желтыми цветами, сияющая на солнце, как золотой
+                дождь, дарящий свет и тепло. Ее солнечные оттенки наполняют
+                пространство позитивной энергией и радостью. Это растение – как
+                лучик солнца в вашем доме, способное поднять настроение в самый
+                пасмурный день.
+              </p>
             </div>
           </div>
         </section>
       </div>
-
       <div class="card-section-wrapper" id="coneiner3">
         <section class="card-section">
           <div class="flower-card">
             <div class="card-image">
-              <img src="img/COMPOSITIONS_1.png" alt="Роза 'Красная страсть'" />
+              <img src="img/COMPOSITIONS_1.png" alt="Роза 'Медовая страсть'" />
             </div>
             <div class="card-content">
               <h3 class="card-title">Роза 'Медовая страсть'</h3>
@@ -380,7 +749,22 @@
                 Роза с необычным медовым оттенком и насыщенным ароматом.
               </p>
               <div class="card-price">1 500 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="25"
+                data-name="Роза 'Медовая страсть'"
+                data-price="1500"
+                data-img="img/COMPOSITIONS_1.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Роза с необычным медовым оттенком и насыщенным ароматом,
+                напоминающим о лете, солнце и сладких воспоминаниях. Её тёплый,
+                янтарный цвет и бархатистые лепестки создают ощущение уюта и
+                нежности. Это редкий и изысканный выбор для выражения глубоких и
+                тёплых чувств, словно лучик света в подарке.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -393,7 +777,22 @@
                 Тюльпаны с мраморным узором на лепестках.
               </p>
               <div class="card-price">2 700 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="26"
+                data-name="Тюльпаны 'Мраморная вуаль'"
+                data-price="2700"
+                data-img="img/COMPOSITIONS_2.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Тюльпаны с мраморным узором на лепестках, создающие ощущение
+                изысканности и уникальности. Каждый цветок – как произведение
+                искусства, с неповторимыми прожилками и переливами. Эти тюльпаны
+                идеально подойдут для ценителей нестандартной красоты и
+                эксклюзивных решений.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -406,7 +805,22 @@
                 Пионы с необычной формой лепестков и нежным ароматом.
               </p>
               <div class="card-price">3 400 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="27"
+                data-name="Пионы 'Сказочные сны'"
+                data-price="3400"
+                data-img="img/COMPOSITIONS_3.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Пионы с необычной формой лепестков и нежным ароматом, словно
+                сошедшие со страниц волшебной сказки. Их причудливая форма и
+                изысканный аромат создают атмосферу мечтательности и волшебства.
+                Эти цветы – воплощение эстетики и романтики, способные
+                вдохновить и унести в мир грез.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -419,7 +833,22 @@
                 Крупные шаровидные хризантемы с насыщенными цветами.
               </p>
               <div class="card-price">2 100 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="28"
+                data-name="Хризантемы 'Королевский шар'"
+                data-price="2100"
+                data-img="img/COMPOSITIONS_4.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Крупные шаровидные хризантемы с насыщенными цветами, создающие
+                эффект роскошного, объёмного цветка. Их пышная, пушистая форма
+                напоминает яркие шары, источающие свет и радость. Эти хризантемы
+                – идеальный выбор для создания яркого акцента в интерьере и в
+                подарке.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -432,7 +861,22 @@
                 Герберы с оттенками синего и бирюзового цветов.
               </p>
               <div class="card-price">2 600 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="29"
+                data-name="Герберы 'Морская волна'"
+                data-price="2600"
+                data-img="img/COMPOSITIONS_5.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Герберы с оттенками синего и бирюзового цветов, напоминающие о
+                свежести морской волны и чистоте океана. Эти прохладные оттенки
+                создают ощущение умиротворения и свежести. Букет идеально
+                подойдёт для любителей морской тематики и для создания атмосферы
+                спокойствия и уюта.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -445,12 +889,26 @@
                 Орхидея с насыщенным бордовым цветом и бархатной текстурой.
               </p>
               <div class="card-price">3 100 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="30"
+                data-name="Орхидея 'Красный бархат'"
+                data-price="3100"
+                data-img="img/COMPOSITIONS_6.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Орхидея с насыщенным бордовым цветом и бархатной текстурой
+                лепестков, излучающая роскошь и страсть. Её глубокий, насыщенный
+                оттенок и бархатистая поверхность создают ощущение изысканности
+                и элегантности. Это растение – символ силы и чувственности.
+              </p>
             </div>
           </div>
           <div class="flower-card">
             <div class="card-image">
-              <img src="img/COMPOSITIONS_1.png" alt="Роза 'Красная страсть'" />
+              <img src="img/COMPOSITIONS_1.png" alt="Роза 'Морозное утро'" />
             </div>
             <div class="card-content">
               <h3 class="card-title">Роза 'Морозное утро'</h3>
@@ -458,7 +916,21 @@
                 Белая роза с серебристым налетом на лепестках.
               </p>
               <div class="card-price">1 450 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="31"
+                data-name="Роза 'Морозное утро'"
+                data-price="1450"
+                data-img="img/COMPOSITIONS_1.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Белая роза с серебристым налетом на лепестках, словно окутанная
+                утренним морозным узором. Её холодный, чистый оттенок и хрупкая
+                красота создают ощущение зимней сказки и нежности. Такая роза –
+                как дыхание зимы, тонкое и завораживающее.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -471,7 +943,21 @@
                 Ярко-желтые тюльпаны с ароматом лилий.
               </p>
               <div class="card-price">2 300 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="32"
+                data-name="Тюльпаны 'Золотая лилия'"
+                data-price="2300"
+                data-img="img/COMPOSITIONS_2.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Ярко-желтые тюльпаны с ароматом лилий, напоминающие о солнечном
+                свете и весеннем цветении. Их насыщенный цвет и нежный аромат
+                создают ощущение радости и обновления. Эти тюльпаны – как
+                солнечный день, дарящий тепло и светлое настроение.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -484,7 +970,22 @@
                 Пионы с фиолетовыми оттенками и ароматом лаванды.
               </p>
               <div class="card-price">3 200 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="33"
+                data-name="Пионы 'Лавандовый сад'"
+                data-price="3200"
+                data-img="img/COMPOSITIONS_3.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Пионы с фиолетовыми оттенками и ароматом лаванды, создающие
+                ощущение пребывания в цветущем лавандовом саду. Их нежные
+                фиолетовые переливы и успокаивающий аромат дарят ощущение
+                умиротворения и гармонии. Эти цветы – как дыхание Provence,
+                наполненное спокойствием и эстетикой.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -497,7 +998,22 @@
                 Хризантемы с необычным амброзиным ароматом.
               </p>
               <div class="card-price">1 950 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="34"
+                data-name="Хризантемы 'Амбре'"
+                data-price="1950"
+                data-img="img/COMPOSITIONS_4.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Хризантемы с необычным амброзиным ароматом, напоминающим о
+                древних благовониях и таинственных восточных сказаниях. Их
+                тонкий аромат и изысканный вид создают атмосферу загадочности и
+                уюта. Это растение – как путешествие в далёкие страны,
+                наполненное ароматами и красками.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -510,7 +1026,21 @@
                 Нежные розовые герберы с ароматом ванили.
               </p>
               <div class="card-price">2 250 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
+              <button
+                class="card-button"
+                data-id="35"
+                data-name="Герберы 'Розовый бриз'"
+                data-price="2250"
+                data-img="img/COMPOSITIONS_5.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Нежные розовые герберы с ароматом ванили, дарящие ощущение
+                свежести, нежности и уюта. Их мягкий оттенок и сладкий аромат
+                создают атмосферу романтики и умиротворения. Такой букет – как
+                нежный бриз, наполняющий пространство любовью и заботой.
+              </p>
             </div>
           </div>
           <div class="flower-card">
@@ -523,325 +1053,22 @@
                 Орхидея с серебристыми полосками на лепестках.
               </p>
               <div class="card-price">2 950 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <div class="card-section-wrapper" id="coneiner4">
-        <section class="card-section">
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_1.png" alt="Роза 'Красная страсть'" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Роза 'Пурпурная магия'</h3>
-              <p class="card-description">
-                Необычная роза с насыщенным пурпурным оттенком.
+              <button
+                class="card-button"
+                data-id="36"
+                data-name="Орхидея 'Серебряный ветер'"
+                data-price="2950"
+                data-img="img/COMPOSITIONS_6.png"
+              >
+                Добавить в корзину
+              </button>
+              <p class="card-description" style="display: none">
+                Орхидея с серебристыми полосками на лепестках, словно овеянная
+                легким серебристым ветром. Её необычный рисунок и светлые
+                оттенки создают ощущение эфемерности и изысканности. Это
+                растение – как символ перемен и свежего взгляда, дарящее
+                вдохновение.
               </p>
-              <div class="card-price">1 650 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_2.png" alt="Букет тюльпанов" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Тюльпаны 'Алый закат'</h3>
-              <p class="card-description">
-                Ярко-алые тюльпаны с насыщенным ароматом.
-              </p>
-              <div class="card-price">2 400 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_3.png" alt="Пионы 'Садовые'" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Пионы 'Бархатное утро'</h3>
-              <p class="card-description">
-                Пионы с бархатной текстурой лепестков.
-              </p>
-              <div class="card-price">3 500 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_4.png" alt="Букет хризантем" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Хризантемы 'Карамель'</h3>
-              <p class="card-description">
-                Хризантемы с теплыми карамельными оттенками.
-              </p>
-              <div class="card-price">2 050 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_5.png" alt="Герберы 'Смешанные'" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Герберы 'Северное сияние'</h3>
-              <p class="card-description">
-                Герберы с оттенками северного сияния.
-              </p>
-              <div class="card-price">2 700 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_6.png" alt="Орхидея фаленопсис" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Орхидея 'Изумрудный лес'</h3>
-              <p class="card-description">
-                Орхидея с необычным зеленым оттенком.
-              </p>
-              <div class="card-price">3 200 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_1.png" alt="Роза 'Красная страсть'" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Роза 'Сахарная вата'</h3>
-              <p class="card-description">
-                Нежная роза с текстурой сахарной ваты.
-              </p>
-              <div class="card-price">1 350 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_2.png" alt="Букет тюльпанов" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Тюльпаны 'Воздушные пузыри'</h3>
-              <p class="card-description">
-                Легкие тюльпаны с перламутровым блеском.
-              </p>
-              <div class="card-price">2 250 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_3.png" alt="Пионы 'Садовые'" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Пионы 'Карамельный рассвет'</h3>
-              <p class="card-description">
-                Пионы с карамельными оттенками и нежным ароматом.
-              </p>
-              <div class="card-price">3 150 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_4.png" alt="Букет хризантем" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Хризантемы 'Морская пена'</h3>
-              <p class="card-description">
-                Белые хризантемы с ароматом морской пены.
-              </p>
-              <div class="card-price">1 850 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_5.png" alt="Герберы 'Смешанные'" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Герберы 'Космическая пыль'</h3>
-              <p class="card-description">
-                Герберы с металлическим блеском на лепестках.
-              </p>
-              <div class="card-price">2 450 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_6.png" alt="Орхидея фаленопсис" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Орхидея 'Ледяная королева'</h3>
-              <p class="card-description">Орхидея с холодным синим оттенком.</p>
-              <div class="card-price">3 050 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <div class="card-section-wrapper" id="coneiner5">
-        <section class="card-section">
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_1.png" alt="Роза 'Красная страсть'" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Роза 'Золотая корона'</h3>
-              <p class="card-description">
-                Роза с золотистыми переливами и королевским ароматом.
-              </p>
-              <div class="card-price">1 700 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_2.png" alt="Букет тюльпанов" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Тюльпаны 'Северный ветер'</h3>
-              <p class="card-description">
-                Тюльпаны с ароматом свежего северного ветра.
-              </p>
-              <div class="card-price">2 350 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_3.png" alt="Пионы 'Садовые'" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Пионы 'Серебряный лист'</h3>
-              <p class="card-description">
-                Пионы с серебристыми прожилками на лепестках.
-              </p>
-              <div class="card-price">3 350 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_4.png" alt="Букет хризантем" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Хризантемы 'Солнечный вихрь'</h3>
-              <p class="card-description">
-                Яркие хризантемы с вихревым узором на лепестках.
-              </p>
-              <div class="card-price">2 150 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_5.png" alt="Герберы 'Смешанные'" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Герберы 'Сахарный песок'</h3>
-              <p class="card-description">
-                Герберы с текстурой мелкого сахара.
-              </p>
-              <div class="card-price">2 550 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_6.png" alt="Орхидея фаленопсис" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Орхидея 'Бронзовый закат'</h3>
-              <p class="card-description">
-                Орхидея с бронзовыми переливами на лепестках.
-              </p>
-              <div class="card-price">3 150 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_1.png" alt="Роза 'Красная страсть'" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Роза 'Морская волна'</h3>
-              <p class="card-description">Роза с оттенками морской волны.</p>
-              <div class="card-price">1 550 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_2.png" alt="Букет тюльпанов" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Тюльпаны 'Сахарный дождь'</h3>
-              <p class="card-description">
-                Тюльпаны с ароматом сахара и ванили.
-              </p>
-              <div class="card-price">2 450 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_3.png" alt="Пионы 'Садовые'" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Пионы 'Королевская броня'</h3>
-              <p class="card-description">
-                Пионы с насыщенным ароматом и бархатной текстурой.
-              </p>
-              <div class="card-price">3 450 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_4.png" alt="Букет хризантем" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Хризантемы 'Снежная буря'</h3>
-              <p class="card-description">
-                Белые хризантемы с пушистыми лепестками.
-              </p>
-              <div class="card-price">1 950 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_5.png" alt="Герберы 'Смешанные'" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Герберы 'Магнитная сила'</h3>
-              <p class="card-description">
-                Герберы с магнитным притяжением к свету.
-              </p>
-              <div class="card-price">2 650 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="flower-card">
-            <div class="card-image">
-              <img src="img/COMPOSITIONS_6.png" alt="Орхидея фаленопсис" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Орхидея 'Серебряная вуаль'</h3>
-              <p class="card-description">
-                Орхидея с серебристой вуалью на лепестках.
-              </p>
-              <div class="card-price">3 250 ₽</div>
-              <button class="card-button">Добавить в корзину</button>
             </div>
           </div>
         </section>
@@ -854,11 +1081,9 @@
         >
         <a href="#" class="nomera_pogination" data-target="coneiner2">2</a>
         <a href="#" class="nomera_pogination" data-target="coneiner3">3</a>
-        <a href="#" class="nomera_pogination" data-target="coneiner4">4</a>
-        <a href="#" class="nomera_pogination" data-target="coneiner5">5</a>
       </nav>
     </div>
-      <section class="advantages-section">
+    <section class="advantages-section">
       <div class="container">
         <h2 class="section-title">Наши преимущества</h2>
         <div class="advantages-grid">
@@ -893,20 +1118,85 @@
               Нестандартные и эффектные букеты для любого повода.
             </p>
           </div>
-          <!-- <div class="advantage-card">
-            <div class="adv-icon">
-              <img src="img/support.png" loading="lazy" alt="Поддержка" />
-            </div>
-            <h3 class="adv-title">Клиентоориентированность</h3>
-            <p class="adv-desc">
-              Индивидуальный подход и поддержка на каждом этапе.
-            </p>
-          </div> -->
         </div>
       </div>
     </section>
-    <script src="scripts/script.js"></script>
+    <footer class="footer">
+      <div class="footer_container">
+        <div class="footer_section">
+          <h4>Каталог</h4>
+          <ul class="footer_links">
+            <li><a href="#">Розы</a></li>
+            <li><a href="#">Тюльпаны</a></li>
+            <li><a href="#">Пионы</a></li>
+            <li><a href="#">Хризантемы</a></li>
+            <li><a href="#">Герберы</a></li>
+          </ul>
+        </div>
+        <div class="footer_section">
+          <h4>Информация</h4>
+          <ul class="footer_links">
+            <li><a href="#">О магазине</a></li>
+            <li><a href="#">Условия доставки</a></li>
+            <li><a href="#">Способы оплаты</a></li>
+          </ul>
+        </div>
+        <div class="footer_section">
+          <h4>Контакты</h4>
+          <div class="footer_contact_info">
+            <div class="contact_item">
+              <span class="contact_text">г. Ульяновск</span>
+            </div>
+            <div class="contact_item">
+              <span class="contact_text">+7 (495) 123-45-67</span>
+            </div>
+            <div class="contact_item">
+              <span class="contact_icon">🕒</span>
+              <span class="contact_text">
+                Пн-Пт: 9:00-18:00<br />
+                Сб-Вс: 10:00-16:00
+              </span>
+            </div>
+            <div class="social_links">
+              <a href="#" title="ВКонтакте">ВК</a>
+              <a href="#" title="Instagram">IG</a>
+              <a href="#" title="Telegram">TG</a>
+              <a href="#" title="Facebook">FB</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="flowerModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <img id="modalImage" src="" alt="Изображение букета" />
+          <div class="modal-text">
+            <h2 id="modalTitle">Название букета</h2>
+            <p id="modalDescription">Описание букета</p>
+            <div id="modalPrice" class="card-price">Цена</div>
+            <button id="modalAddToCart" class="card-button">
+              Добавить в корзину
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="cartModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <h2>Ваша корзина</h2>
+          <div id="cartItems"></div>
+          <div id="cartTotal">Итого: 0 ₽</div>
+          <button id="checkoutButton" class="card-button">
+            Оформить заказ
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="scripsts/script.js"></script>
+    <script src="scripsts/katalog.js"></script>
   </body>
 </html>
-
-
